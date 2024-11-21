@@ -4,6 +4,8 @@ class Quiz(models.Model):
     name = models.CharField(max_length=255)
     sport = models.CharField(max_length=50)  # E.g., "NCAA Football", "NFHS Basketball"
     level = models.CharField(max_length=50, choices=[('beginner', 'Beginner'), ('advanced', 'Advanced')])
+    created_by = models.CharField(max_length=50)
+
 
     def __str__(self):
         return f"{self.name} ({self.sport} - {self.level})"

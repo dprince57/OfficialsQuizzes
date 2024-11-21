@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from quizzes.models import Quiz, Question
 
+
 class Command(BaseCommand):
     help = "Create sample quizzes with questions for testing"
 

@@ -9,7 +9,7 @@ class QuestionInline(admin.TabularInline):
 
 @admin.register(Quiz)
 class QuizAdmin(admin.ModelAdmin):
-    list_display = ('name', 'sport', 'level', 'created_by')
-    list_filter = ('sport', 'level')
-    search_fields = ('name', 'sport')
+    list_display = ['name', 'sport', 'level', 'created_by']
+    list_filter = ['sport', 'level']
+    search_fields = ['name', 'sport']
     inlines = [QuestionInline]
